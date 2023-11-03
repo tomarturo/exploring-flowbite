@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
 </head>
 <body>
-   {% include "_navigation.html" %}
-   {% block content %}
-   {% endblock content %} 
-   {% include "_footer.html" %}
+    {% include "_navigation.html" %}
+    <div class="text-orange-600" id="time-widget">
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span>
+    </div>
+    {% block content %}
+    {% endblock content %} 
+    {% include "_footer.html" %}
+    <script src="/static/time-widget.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 </body>
 </html>
