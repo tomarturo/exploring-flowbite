@@ -76,6 +76,3 @@ def solutions():
 	selected_project = projectheader.get("solutions")
 	context["selected_project"] = selected_project
 	return render_template("solutions.html", **context)
-
-if __name__ == '__main__':
-	app.run(debug=True)
